@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="C:\Users\Pichau\OneDrive\Área de Trabalho\MainPast\spring\workshopmongo"/>
 			<item value="C:\Users\Pichau\OneDrive\Área de Trabalho\spring\workshopmongo"/>
 		</list>
 		<list key="projectNameTemplate">
