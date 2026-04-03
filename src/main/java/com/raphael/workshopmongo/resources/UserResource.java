@@ -6,6 +6,7 @@ import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -20,8 +21,7 @@ import com.raphael.workshopmongo.services.UserService;
 
 @RestController
 @RequestMapping(value="/users")
-public class UserResource {
-	
+public class UserResource {	
 	@Autowired
 	private UserService service;
 	
@@ -46,5 +46,11 @@ public class UserResource {
 		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(obj.getId()).toUri();
 		
 		return ResponseEntity.created(uri).build();
+	}
+	
+	@DeleteMapping("/{id}")
+	public ResponseEntity<UserDTO> delete(@PathVariable String id){	
+		service.delete(id); 		
+		return ResponseEntity.noContent().build();
 	}
 }
