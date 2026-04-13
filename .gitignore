@@ -1,10 +1,14 @@
+# Maven
 HELP.md
 target/
-.mvn/wrapper/maven-wrapper.jar
+mvnw
+mvnw.cmd
+.mvn/
+
 !**/src/main/**/target/
 !**/src/test/**/target/
 
-### STS ###
+# Eclipse
 .apt_generated
 .classpath
 .factorypath
@@ -12,14 +16,15 @@ target/
 .settings
 .springBeans
 .sts4-cache
+.metadata/
 
-### IntelliJ IDEA ###
+# IntelliJ IDEA
 .idea
 *.iws
 *.iml
 *.ipr
 
-### NetBeans ###
+# NetBeans
 /nbproject/private/
 /nbbuild/
 /dist/
@@ -29,5 +34,19 @@ build/
 !**/src/main/**/build/
 !**/src/test/**/build/
 
-### VS Code ###
+# VS Code
 .vscode/
+
+# Logs
+*.log
+logs/
+
+# Segredos e variáveis de ambiente
+.env
+.env.*
+application-local.properties
+application-local.yml
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
